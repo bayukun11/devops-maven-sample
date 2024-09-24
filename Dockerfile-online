@@ -1,6 +1,8 @@
 FROM openjdk:8
 #FROM java:openjdk-8-jre-alpine
 
+RUN yarn config set network-timeout 600000
+
 WORKDIR /home
 
 COPY target/*.jar /home
