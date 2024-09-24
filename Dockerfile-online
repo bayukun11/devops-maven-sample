@@ -1,5 +1,7 @@
 FROM openjdk:8
 
+RUN yarn config set network-timeout 600000
+
 WORKDIR /home
 
 COPY target/*.jar /home
